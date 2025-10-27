@@ -41,7 +41,7 @@ db.sequelize.sync().then((result)=>{
         }
     })
 
-app.put("/komik",async(req,res)=>{
+app.put("/komik/:id",async(req,res)=>{
     const id= req.params.id;
     const data = req.body;
         try{
@@ -53,7 +53,7 @@ app.put("/komik",async(req,res)=>{
             res.status(500).send(err);
         }
     })    
-    app.delete("/komik",async(req,res)=>{
+    app.delete("/komik/:id",async(req,res)=>{
     const id= req.params.id;
     
         try{
